@@ -34,14 +34,6 @@ class HTMLTagRemove
 		} while ($this->iterator->valid());
 	}
 
-	public function save(string $FileName = null)
-	{
-		if (!is_null($FileName)) {
-			file_put_contents($FileName, $this->dom);
-		} else {
-			file_put_contents('user.html', $this->dom);
-		}
-	}
 }
 class HTMLIterator implements Iterator
 {
